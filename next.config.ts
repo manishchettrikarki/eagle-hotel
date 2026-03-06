@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ["static-resources-elementor.mirai.com", "images.unsplash.com"],
+  },
 };
 
 export default nextConfig;
