@@ -1,16 +1,32 @@
 import PageHero from "@/components/reusable/pageHeroSection";
 import GalleryGrid from "@/components/views/gallery/galleryGrid";
+import { createClient } from "@/lib/supabase/server";
+import type { Metadata } from "next";
+import { makeTitle, SITE, ogImage } from "@/lib/seo";
 
 /**
  *
  */
-export const metadata = {
-  title: "Gallery — Hotel Eagle Mountain",
+export const metadata: Metadata = {
+  title: "Gallery",
   description:
-    "Photos of the lodge, Tarap valley landscapes, culture, dining and wellness at Hotel Eagle Mountain, Upper Dolpa.",
+    "Photographs of Hotel Eagle Mountain, Dho Tarap village, the Tarap valley, Himalayan landscapes, Bon culture, and mountain dining in Upper Dolpa, Nepal.",
+  alternates: { canonical: "/gallery" },
+  openGraph: {
+    url: `${SITE.url}/gallery`,
+    title: makeTitle("Gallery"),
+    images: ogImage("/images/og-gallery.jpg"),
+  },
 };
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const supabase = await createClient();
+  const { data: images } = await supabase
+    .from("gallery_images")
+    .select("*")
+    .order("sort_order", { ascending: true });
+
+  //
   return (
     <>
       <PageHero
@@ -21,7 +37,7 @@ export default function GalleryPage() {
         imagePosition="center 40%"
         height="h-[60vh] min-h-[420px]"
       />
-      <GalleryGrid />
+      <GalleryGrid images={images ?? []} />
     </>
   );
 }

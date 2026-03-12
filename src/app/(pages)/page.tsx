@@ -7,6 +7,24 @@ import LocationSection from "@/components/views/home/locationSection";
 import TestimonialsSection from "@/components/views/home/testimonial";
 import GastronomySection from "@/components/views/home/gastronomySection";
 
+//
+import type { Metadata } from "next";
+import { makeTitle, SITE, ogImage } from "@/lib/seo";
+
+//
+export const metadata: Metadata = {
+  title: makeTitle(),
+  description: SITE.description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: SITE.url,
+    title: makeTitle(),
+    description: SITE.description,
+    images: ogImage("/images/og-home.jpg"),
+  },
+};
+
 /**
  *
  */
