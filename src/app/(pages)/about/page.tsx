@@ -4,10 +4,21 @@ import AboutStory from "@/components/views/about/aboutStory";
 import AboutTeam from "@/components/views/about/aboutTeam";
 import AboutValues from "@/components/views/about/aboutValues";
 
-export const metadata = {
-  title: "About — Hotel Eagle Mountain",
+//
+import type { Metadata } from "next";
+import { makeTitle, SITE, ogImage } from "@/lib/seo";
+
+// Page metadata for SEO and social sharing
+export const metadata: Metadata = {
+  title: "Our Story",
   description:
-    "The story, values and team behind Hotel Eagle Mountain in Dho Tarap, Upper Dolpa, Nepal.",
+    "Learn about the founding of Hotel Eagle Mountain — a wilderness lodge built on Newar craftsmanship, Bon heritage and 100% local community employment in Dho Tarap, Upper Dolpa, Nepal.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    url: `${SITE.url}/about`,
+    title: makeTitle("Our Story"),
+    images: ogImage("/images/og-about.jpg"),
+  },
 };
 
 export default function AboutPage() {

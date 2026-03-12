@@ -1,13 +1,21 @@
 import PageHero from "@/components/reusable/pageHeroSection";
 import ContactForm from "@/components/views/contact/contactForm";
+import type { Metadata } from "next";
+import { makeTitle, SITE, ogImage } from "@/lib/seo";
 
 /**
  *
  */
-export const metadata = {
-  title: "Contact — Hotel Eagle Mountain",
+export const metadata: Metadata = {
+  title: "Contact & Plan Your Journey",
   description:
-    "Get in touch with Hotel Eagle Mountain to plan your journey to Dho Tarap, Upper Dolpa, Nepal.",
+    "Contact Hotel Eagle Mountain to plan your trip to Dho Tarap. Ask about trekking permits, room availability, guided expeditions and bespoke experiences in Upper Dolpa, Nepal.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    url: `${SITE.url}/contact`,
+    title: makeTitle("Contact & Plan Your Journey"),
+    images: ogImage("/images/og-contact.jpg"),
+  },
 };
 
 /**
