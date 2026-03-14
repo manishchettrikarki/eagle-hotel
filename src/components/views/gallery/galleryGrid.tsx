@@ -56,23 +56,27 @@ export default function GalleryGrid({ images }: { images: GalleryImage[] }) {
                 key={img.id}
                 delay={((i % 3) + 1) as 1 | 2 | 3}
                 className="break-inside-avoid group cursor-pointer relative overflow-hidden"
-                onClick={() => setLightbox(img)}
               >
-                <Image
-                  src={img.public_url}
-                  alt={img.caption ?? "Gallery image"}
-                  width={800}
-                  height={600}
-                  sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, (max-width:1280px) 33vw, 25vw"
-                  className="w-full object-cover block transition-transform duration-700 group-hover:scale-[1.04]"
-                />
+                <div
+                  className="group cursor-pointer relative overflow-hidden"
+                  onClick={() => setLightbox(img)}
+                >
+                  <Image
+                    src={img.public_url}
+                    alt={img.caption ?? "Gallery image"}
+                    width={800}
+                    height={600}
+                    sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, (max-width:1280px) 33vw, 25vw"
+                    className="w-full object-cover block transition-transform duration-700 group-hover:scale-[1.04]"
+                  />
 
-                <div className="absolute inset-0 bg-(--navy)/0 group-hover:bg-(--navy)/45 transition-all duration-500 flex items-end p-4 opacity-0 group-hover:opacity-100">
-                  {img.caption && (
-                    <span className="font-display text-white text-[0.82rem] italic">
-                      {img.caption}
-                    </span>
-                  )}
+                  <div className="absolute inset-0 bg-(--navy)/0 group-hover:bg-(--navy)/45 transition-all duration-500 flex items-end p-4 opacity-0 group-hover:opacity-100">
+                    {img.caption && (
+                      <span className="font-display text-white text-[0.82rem] italic">
+                        {img.caption}
+                      </span>
+                    )}
+                  </div>
                 </div>
               </RevealWrapper>
             ))}
