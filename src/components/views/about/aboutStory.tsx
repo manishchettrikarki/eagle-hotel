@@ -12,7 +12,7 @@ export default function AboutStory() {
         <RevealWrapper>
           <Image
             src="/images/hotel-7.jpg"
-            alt="Hotel Eagle Mountain lodge"
+            alt="Hotel Golden Eagle"
             width={900}
             height={520}
             className="w-full h-130 object-cover"

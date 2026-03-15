@@ -67,12 +67,12 @@ export default function WelcomeSection() {
         <RevealWrapper delay={2} className="lg:pl-6">
           <SectionHeader
             eyebrow="Upper dolpa, nepal"
-            title="The Eagle Mountains Hotel"
-            body="Welcome to The Eagle Mountains Hotel, a luxurious retreat nestled in the heart of the majestic Himalayas. Experience unparalleled comfort, breathtaking views, and warm hospitality in our exquisite mountain sanctuary."
+            title="Hotel Golden Eagle"
+            body="Welcome to Hotel Golden Eagle, a luxurious retreat nestled in the heart of the majestic Himalayas. Experience unparalleled comfort, breathtaking views, and warm hospitality in our exquisite mountain sanctuary."
           />
 
           <p className="text-[0.92rem] leading-[1.8] font-light text-(--charcoal) mt-4 mb-8 max-w-130">
-            Hotel Eagle Mountain located in upper dolpa of nepal, is a luxurious
+            Hotel Golden Eagle located in upper dolpa of nepal, is a luxurious
             haven nestled amidst the breathtaking Himalayan mountains. With its
             stunning architecture and world-class amenities, it offers an
             unforgettable experience for travelers seeking tranquility and
