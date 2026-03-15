@@ -1,13 +1,27 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import type { Event } from "@/lib/supabase/type";
-import Button from "@/components/reusable/button";
 import RevealWrapper from "@/components/reusable/revealWrapper";
 
-// Fallback placeholder when no image is set
-const PLACEHOLDER =
-  "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80";
+const PLACEHOLDER = "/images/village.jpg";
 
-//
+function EventImage({ src, alt }: { src: string | null; alt: string }) {
+  const [imgSrc, setImgSrc] = useState<string>(src || PLACEHOLDER);
+
+  return (
+    <Image
+      src={imgSrc}
+      alt={alt}
+      width={800}
+      height={220}
+      className="w-full h-55 object-cover transition-transform duration-700 group-hover:scale-[1.06]"
+      onError={() => setImgSrc(PLACEHOLDER)}
+    />
+  );
+}
+
 export default function EventsList({ events }: { events: Event[] }) {
   return (
     <section className="bg-(--cream) py-24 md:py-32 px-6 md:px-[6vw]">
@@ -36,14 +50,7 @@ export default function EventsList({ events }: { events: Event[] }) {
                 className="bg-white group overflow-hidden flex flex-col"
               >
                 <div className="overflow-hidden relative">
-                  <Image
-                    src={e.image_url || PLACEHOLDER}
-                    alt={e.title}
-                    loading="lazy"
-                    width={800}
-                    height={220}
-                    className="w-full h-55 object-cover transition-transform duration-700 group-hover:scale-[1.06]"
-                  />
+                  <EventImage src={e.image_url} alt={e.title} />
                   <span className="absolute top-4 left-4 text-[0.6rem] tracking-[0.2em] uppercase bg-(--gold) text-(--navy) px-3 py-1.5 font-medium">
                     {e.tag}
                   </span>
@@ -80,12 +87,6 @@ export default function EventsList({ events }: { events: Event[] }) {
             ))}
           </div>
         )}
-
-        <RevealWrapper delay={1} className="mt-14 flex justify-center">
-          <Button href="/contact" variant="primary">
-            Enquire about an experience
-          </Button>
-        </RevealWrapper>
       </div>
     </section>
   );

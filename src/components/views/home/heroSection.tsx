@@ -1,5 +1,6 @@
-// import Button from "@/components/reusable/Button";
+import { ABOUT_CONTENT, HOTEL_NAME } from "@/utils/constants";
 
+//
 export default function HeroSection() {
   return (
     <section className="relative h-svh min-h-150 overflow-hidden flex items-end">
@@ -12,10 +13,10 @@ export default function HeroSection() {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/videos/upper.mp4" type="video/mp4" />
+          <source src="/videos/video-2.mp4" type="video/mp4" />
         </video>
 
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
       {/* Gradient overlay */}
@@ -24,27 +25,17 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-10 px-6 md:px-[6vw] pb-[10vh] max-w-175">
         <p className="animate-fade-up-1 text-[0.68rem] tracking-[0.35em] uppercase text-(--gold) mb-5">
-          The Eagle hotel and spa at the heart of Nepal
+          {HOTEL_NAME.full}
         </p>
 
         <h1 className="animate-fade-up-2 font-display text-[clamp(3rem,7vw,6rem)] font-normal text-white leading-[1.05] mb-5">
-          Where joy <em className="italic text-(--gold)">exist</em>
+          {HOTEL_NAME.heroFirst}{" "}
+          <em className="italic text-(--gold)">{HOTEL_NAME.heroSecond}</em>
         </h1>
 
         <p className="animate-fade-up-3 text-[0.95rem] text-white/72 leading-[1.75] mb-8 max-w-120 font-light">
-          Experience the perfect blend of luxury and nature at The Eagle Hotel
-          and Spa, nestled in the heart of Nepal. Indulge in breathtaking views,
-          world-class amenities, and warm hospitality for an unforgettable stay.
+          {ABOUT_CONTENT.desc}
         </p>
-
-        {/* <div className="animate-fade-up-4 flex flex-wrap gap-4">
-          <Button href="#booking" variant="primary">
-            Reserva tu estancia
-          </Button>
-          <Button href="#welcome" variant="outline">
-            Descubrir el hotel
-          </Button>
-        </div> */}
       </div>
 
       {/* Scroll indicator */}

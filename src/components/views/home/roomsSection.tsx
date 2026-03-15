@@ -1,13 +1,14 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
-import RevealWrapper from "@/components/reusable/revealWrapper";
-import Button from "@/components/reusable/button";
-import { ROOM_TYPES } from "@/utils/constants";
 import Image from "next/image";
+import { HOMEPAGE_ROOMS, ROOM_TYPES } from "@/utils/constants";
+import RevealWrapper from "@/components/reusable/revealWrapper";
+import { useState, useEffect, useRef, useCallback } from "react";
 
+//
 const PAGE_SIZE = 3;
 
+//
 export default function RoomsSection() {
   const [page, setPage] = useState(0);
   const maxPage = Math.ceil(ROOM_TYPES.length / PAGE_SIZE) - 1;
@@ -90,22 +91,14 @@ export default function RoomsSection() {
         <div className="pt-2">
           <RevealWrapper>
             <p className="text-[0.65rem] tracking-[0.35em] uppercase mb-3 text-(--gold)">
-              Rest at altitude
+              {HOMEPAGE_ROOMS.subtitle}
             </p>
             <h2 className="font-display text-[clamp(2rem,4vw,3.2rem)] font-normal leading-[1.1] mb-4 text-(--navy)">
-              Rooms &amp; Suites
+              {HOMEPAGE_ROOMS.title}
             </h2>
             <p className="text-[0.95rem] leading-[1.8] font-light max-w-135 text-(--charcoal)">
-              Each room is crafted from local stone and timber, warmed by
-              traditional hearths and designed to frame the raw grandeur of the
-              Tarap valley and the Dhaulagiri peaks beyond.
+              {HOMEPAGE_ROOMS.desc}
             </p>
-          </RevealWrapper>
-
-          <RevealWrapper delay={3} className="mt-8">
-            <Button href="#" variant="primary">
-              View all rooms
-            </Button>
           </RevealWrapper>
         </div>
 
@@ -141,9 +134,6 @@ export default function RoomsSection() {
                     {room.name}
                   </span>
                 </div>
-                <span className="room-card-explore text-[0.62rem] tracking-[0.2em] uppercase text-(--gold) border border-(--gold) px-3 py-1.5 whitespace-nowrap">
-                  Explore
-                </span>
               </div>
             ))}
           </div>

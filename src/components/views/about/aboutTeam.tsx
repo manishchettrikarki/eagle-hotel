@@ -1,32 +1,6 @@
 import Image from "next/image";
 import RevealWrapper from "@/components/reusable/revealWrapper";
-
-const TEAM = [
-  {
-    name: "Pemba Sherpa",
-    role: "Founder & Head Guide",
-    bio: "Born in Dho Tarap, Pemba has guided trekkers through Upper Dolpa for over 25 years. His knowledge of the land, language and culture is unmatched.",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
-  },
-  {
-    name: "Sita Budha",
-    role: "Lodge Manager",
-    bio: "A Dolpa native and trained hospitality professional, Sita ensures every guest experiences the warmth of Tarap valley's legendary generosity.",
-    img: "https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=400&q=80",
-  },
-  {
-    name: "Dawa Lama",
-    role: "Head Chef",
-    bio: "Dawa transforms the seasonal harvest of the Tarap valley into extraordinary meals — from yak-butter dumplings to high-altitude herb infusions.",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
-  },
-  {
-    name: "Tenzin Gurung",
-    role: "Expedition Lead",
-    bio: "With 15 years guiding remote Himalayan expeditions, Tenzin plans every route with meticulous care for safety, ecology and cultural respect.",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
-  },
-];
+import { ABOUTPAGE_TEAM } from "@/utils/constants";
 
 export default function AboutTeam() {
   return (
@@ -42,7 +16,7 @@ export default function AboutTeam() {
         </RevealWrapper>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {TEAM.map((member, i) => (
+          {ABOUTPAGE_TEAM.map((member, i) => (
             <RevealWrapper
               key={member.name}
               delay={((i % 3) + 1) as 1 | 2 | 3}

@@ -12,7 +12,7 @@ import { makeTitle, SITE, ogImage } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Our Story",
   description:
-    "Learn about the founding of Hotel Eagle Mountain — a wilderness lodge built on Newar craftsmanship, Bon heritage and 100% local community employment in Dho Tarap, Upper Dolpa, Nepal.",
+    "Learn about the founding of Hotel Golden Eagle — a wilderness lodge built on Newar craftsmanship, Bon heritage and 100% local community employment in Dho Tarap, Upper Dolpa, Nepal.",
   alternates: { canonical: "/about" },
   openGraph: {
     url: `${SITE.url}/about`,
@@ -27,8 +27,8 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Our Story"
         titleLine1="About Hotel"
-        titleLine2="Eagle Mountain"
-        image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=90"
+        titleLine2="Golden Eagle"
+        image="/images/village.jpg"
         imagePosition="center"
       />
       <AboutStory />

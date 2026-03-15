@@ -1,5 +1,7 @@
+import { IconFacebook, IconInstagram } from "@/icons";
 import type { ClubBenefit, NavLink, RoomType, ServiceCard } from "@/types";
 
+//
 export const NAV_LINKS: NavLink[] = [
   { label: "About", href: "/about" },
   { label: "Events", href: "/events" },
@@ -8,14 +10,85 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 export const ABOUT_CONTENT = {
-  title: "Welcome to Mountain View Hotel",
-  desc: "Mountain View Hotel offers a perfect blend of luxury, comfort, and breathtaking scenery. Located in a peaceful mountain destination, our hotel provides premium rooms, world-class dining, and relaxing spa experiences for travelers seeking both adventure and relaxation.",
+  title: "Welcome to Hotel Golden Eagle",
+  desc: "Hotel Golden Eagle offers a perfect blend of luxury, comfort, and breathtaking scenery. Located in a peaceful mountain destination, our hotel provides premium rooms, world-class dining, and relaxing spa experiences for travelers seeking both adventure and relaxation.",
   images: [
     "/images/hotel/about-1.jpg",
     "/images/hotel/about-2.jpg",
     "/images/hotel/about-3.jpg",
   ],
 };
+
+export const HOTEL_NAME = {
+  full: "Hotel Golden Eagle",
+  first: "Hotel",
+  second: "Golden",
+  third: "Eagle",
+  heroFirst: "Where joy",
+  heroSecond: "exist",
+};
+
+export const HOMEPAGE_GALLERY = {
+  shortTitle: "A glimpse of Hotel Golden Eagle",
+  title: "Experience the Magic of Hotel Golden Eagle",
+  desc: "Discover the breathtaking beauty and unparalleled luxury of Hotel Golden Eagle through our curated gallery. From stunning mountain vistas to our elegant interiors, each image captures the essence of your unforgettable stay.",
+};
+
+export const HOMEPAGE_ROOMS = {
+  subtitle: "Rest at altitude",
+  title: "Rooms & Suites",
+  desc: "Each room is crafted from local stone and timber, warmed by traditional hearths and designed to frame the raw grandeur of the Tarap valley and the Dhaulagiri peaks beyond.",
+};
+
+export const ABOUTPAGE_VALUES = [
+  {
+    icon: "✦",
+    title: "Authentic Dolpo Hospitality",
+    body: "Guests are welcomed with the warmth of traditional Dolpo culture. Our lodge reflects the lifestyle of the high Himalayas, where hospitality is rooted in community and respect for visitors.",
+  },
+  {
+    icon: "◈",
+    title: "Community First",
+    body: "Our team is locally based, supporting families and farmers from villages like Dho Tarap. We prioritize local food, local guides, and community development through tourism.",
+  },
+  {
+    icon: "◇",
+    title: "Protecting the Wilderness",
+    body: "Located near Shey Phoksundo National Park, we follow responsible tourism and Leave No Trace principles to protect the fragile ecosystems of Upper Dolpa.",
+  },
+  {
+    icon: "○",
+    title: "Experienced Mountain Guides",
+    body: "Our guides are from the Dolpa region and know the ancient trails, high passes, and cultural landmarks of Upper Dolpa better than anyone.",
+  },
+];
+
+export const ABOUTPAGE_TEAM = [
+  {
+    name: "Pemba Sherpa",
+    role: "Founder & Head Guide",
+    bio: "Born in Dho Tarap, Pemba has guided trekkers through Upper Dolpa for over 25 years. His knowledge of the land, language and culture is unmatched.",
+    img: "/images/userPlaceholder.jpg",
+  },
+  {
+    name: "Sita Budha",
+    role: "Lodge Manager",
+    bio: "A Dolpa native and trained hospitality professional, Sita ensures every guest experiences the warmth of Tarap valley's legendary generosity.",
+    img: "/images/userPlaceholder.jpg",
+  },
+  {
+    name: "Dawa Lama",
+    role: "Head Chef",
+    bio: "Dawa transforms the seasonal harvest of the Tarap valley into extraordinary meals — from yak-butter dumplings to high-altitude herb infusions.",
+    img: "/images/userPlaceholder.jpg",
+  },
+  {
+    name: "Tenzin Gurung",
+    role: "Expedition Lead",
+    bio: "With 15 years guiding remote Himalayan expeditions, Tenzin plans every route with meticulous care for safety, ecology and cultural respect.",
+    img: "/images/userPlaceholder.jpg",
+  },
+];
 
 export const BLOG_POSTS = [
   {
@@ -39,10 +112,13 @@ export const BLOG_POSTS = [
 ];
 
 export const CONTACT_INFO = {
-  address: "123 Alpine Road, Mountain Valley",
-  phone: "+1 234 567 890",
-  email: "info@mountainviewhotel.com",
+  address: "Tarap Valley, Dho Tarap Village",
+  city: "Upper Dolpa District, Karnali Province, Nepal",
+  height: "3,950m above sea level",
+  phone: "+977 (0) 000 000 000",
+  email: "info@eaglemountain-dolpa.com",
   mapImage: "/images/hotel/map.jpg",
+  location: "Dho Tarap · Upper Dolpa · Nepal",
 };
 
 export const HOTEL_GALLERY = [
@@ -73,74 +149,79 @@ export const LOCATION_STATS = [
 ];
 
 export const GALLERY_IMGS: string[] = [
-  "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80",
-  "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-  "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
-  "https://images.unsplash.com/photo-1617575521317-d2974f3b56d2?w=800&q=80",
-  "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800&q=80",
-  "https://images.unsplash.com/photo-1502920514313-52581002a659?w=800&q=80",
+  "/images/hotel-2.jpg",
+  "/images/hotel-3.jpg",
+  "/images/hotel-4.jpg",
+  "/images/hotel-5.jpg",
+  "/images/hotel-6.jpg",
 ];
 
 export const GASTRO_IMGS: string[] = [
-  "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80",
-  "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80",
-  "https://images.unsplash.com/photo-1546549032-9571cd6b27df?w=800&q=80",
+  "/images/food-1.jpg",
+  "/images/food-2.jpg",
+  "/images/food-3.jpg",
+];
+
+export const VENUES = [
+  "The Tarap Table — Nepali & Tibetan highland cuisine",
+  "Eagle Hearth — Open-fire trekker's dining hall",
+  "Butter Tea Lounge — Traditional Bon hospitality",
 ];
 
 export const ROOM_TYPES: RoomType[] = [
   {
-    name: "Eagle Suite",
-    img: "/images/rooms/1.jpg",
+    name: "Dining Hall",
+    img: "/images/hotel-3.jpg",
   },
   {
-    name: "Himalayan Deluxe",
-    img: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=600&q=80",
+    name: "Camping Area",
+    img: "/images/hotel-9.jpg",
   },
+  // {
+  //   name: "Valley View Double",
+  //   img: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80",
+  // },
+  // {
+  //   name: "Tarap Twin Room",
+  //   img: "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?w=600&q=80",
+  // },
+  // {
+  //   name: "Dolpa Stone Cottage",
+  //   img: "https://images.unsplash.com/photo-1506974210756-8e1b8985d348?w=600&q=80",
+  // },
+  // {
+  //   name: "Trekker's Lodge",
+  //   img: "/images/rooms/1.jpg",
+  // },
   {
-    name: "Valley View Double",
-    img: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80",
-  },
-  {
-    name: "Tarap Twin Room",
-    img: "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?w=600&q=80",
-  },
-  {
-    name: "Dolpa Stone Cottage",
-    img: "https://images.unsplash.com/photo-1506974210756-8e1b8985d348?w=600&q=80",
-  },
-  {
-    name: "Trekker's Lodge",
-    img: "/images/rooms/1.jpg",
-  },
-  {
-    name: "Family Mountain Room",
-    img: "/images/rooms/1.jpg",
+    name: "Room",
+    img: "/images/hotel-11.jpg",
   },
 ];
 
 export const SERVICES: ServiceCard[] = [
   {
-    title: "High-Altitude Trekking",
-    desc: "Expert-guided treks through the Dho Tarap valley, ancient trade routes, and the pristine wilderness of Upper Dolpa.",
-    img: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80",
+    title: "Guided Upper Dolpo Treks",
+    desc: "Experienced local guides lead treks through Shey Phoksundo National Park, Dho Tarap valley, and ancient Himalayan trade routes.",
+    img: "/images/village.jpg",
     href: "#services",
   },
   {
-    title: "Cultural Immersion",
-    desc: "Explore centuries-old Bon monasteries, sacred sky-burial sites, and the living Newar traditions of the Tarap valley.",
-    img: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=600&q=80",
+    title: "Monastery & Cultural Tours",
+    desc: "Visit ancient Bon and Buddhist monasteries such as Shey Gompa and explore traditional Tibetan-influenced villages of Upper Dolpa.",
+    img: "/images/upper-dolpa.png",
     href: "#services",
   },
   {
-    title: "Mountain Wellness",
-    desc: "Himalayan hot-stone therapy, herbal steam baths, and altitude yoga with panoramic views of the Dhaulagiri massif.",
-    img: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&q=80",
-    href: "#spa",
+    title: "Local Food & Village Homestay",
+    desc: "Experience authentic Dolpo life by staying with local families and enjoying traditional meals like dal bhat, Tibetan bread, and butter tea.",
+    img: "/images/hotel-6.jpg",
+    href: "#services",
   },
   {
-    title: "Snow Leopard Safaris",
-    desc: "Guided wildlife expeditions in one of the last habitats of the snow leopard, Himalayan wolf, and blue sheep.",
-    img: "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=600&q=80",
+    title: "Wildlife & Nature Exploration",
+    desc: "Explore the wilderness of Shey Phoksundo National Park, home to rare wildlife such as snow leopards, blue sheep, and Himalayan wolves.",
+    img: "/images/hotel-9.jpg",
     href: "#services",
   },
 ];
@@ -159,55 +240,12 @@ export const SOCIAL_LINKS = [
   {
     label: "Facebook",
     href: "#",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-      >
-        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-      </svg>
-    ),
+    icon: <IconFacebook />,
   },
   {
     label: "Instagram",
     href: "#",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-        <circle cx="12" cy="12" r="4" />
-        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-      </svg>
-    ),
-  },
-  {
-    label: "LinkedIn",
-    href: "#",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-      >
-        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-        <rect x="2" y="9" width="4" height="12" />
-        <circle cx="4" cy="4" r="2" />
-      </svg>
-    ),
+    icon: <IconInstagram />,
   },
 ];
 

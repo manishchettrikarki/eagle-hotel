@@ -1,6 +1,5 @@
 import RevealWrapper from "@/components/reusable/revealWrapper";
 import SectionHeader from "@/components/reusable/sectionHeader";
-import Button from "@/components/reusable/button";
 import { SERVICES } from "@/utils/constants";
 import Image from "next/image";
 
@@ -19,7 +18,7 @@ export default function ServicesSection() {
               title="Our services"
             />
           </RevealWrapper>
-          <RevealWrapper delay={1}>
+          {/* <RevealWrapper delay={1}>
             <Button
               href="https://www.themountainshotel.es/servicios/"
               variant="primary"
@@ -27,7 +26,7 @@ export default function ServicesSection() {
             >
               To dos & amenities
             </Button>
-          </RevealWrapper>
+          </RevealWrapper> */}
         </div>
 
         {/* Cards grid */}

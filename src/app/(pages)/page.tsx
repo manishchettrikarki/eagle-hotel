@@ -1,17 +1,16 @@
+import { makeTitle, SITE, ogImage } from "@/lib/seo";
+import type { Metadata } from "next";
+import { createClient } from "@/lib/supabase/server";
+
 import HeroSection from "@/components/views/home/heroSection";
-import RoomsSection from "@/components/views/home/roomsSection";
-import GallerySection from "@/components/views/home/galleryStrip";
 import WelcomeSection from "@/components/views/home/welcomeSection";
+import GallerySection from "@/components/views/home/galleryStrip";
+import RoomsSection from "@/components/views/home/roomsSection";
+import GastronomySection from "@/components/views/home/gastronomySection";
 import ServicesSection from "@/components/views/home/servicesSection";
 import LocationSection from "@/components/views/home/locationSection";
 import TestimonialsSection from "@/components/views/home/testimonial";
-import GastronomySection from "@/components/views/home/gastronomySection";
 
-//
-import type { Metadata } from "next";
-import { makeTitle, SITE, ogImage } from "@/lib/seo";
-
-//
 export const metadata: Metadata = {
   title: makeTitle(),
   description: SITE.description,
@@ -25,16 +24,19 @@ export const metadata: Metadata = {
   },
 };
 
-/**
- *
- */
-export default function HomePage() {
-  //
+export default async function HomePage() {
+  const supabase = await createClient();
+  const { data: galleryImages } = await supabase
+    .from("gallery_images")
+    .select("id, public_url, caption")
+    .order("sort_order", { ascending: true })
+    .limit(12); // enough for the slider
+
   return (
     <>
       <HeroSection />
       <WelcomeSection />
-      <GallerySection />
+      <GallerySection images={galleryImages ?? []} />
       <RoomsSection />
       <GastronomySection />
       <ServicesSection />

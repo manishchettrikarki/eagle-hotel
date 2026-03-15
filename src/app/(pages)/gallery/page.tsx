@@ -33,7 +33,7 @@ export default async function GalleryPage() {
         eyebrow="The lodge, the valley, the people"
         titleLine1="Our"
         titleLine2="Gallery"
-        image="https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=1800&q=90"
+        image="/images/village.jpg"
         imagePosition="center 40%"
         height="h-[60vh] min-h-[420px]"
       />

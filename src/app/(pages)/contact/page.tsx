@@ -28,7 +28,7 @@ export default function ContactPage() {
         eyebrow="Get in touch"
         titleLine1="Plan your"
         titleLine2="journey"
-        image="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1800&q=90"
+        image="/images/village.jpg"
         imagePosition="center 35%"
         height="h-[60vh] min-h-[420px]"
       />

@@ -1,5 +1,5 @@
 import EventsList from "@/components/views/events/eventsList";
-import EventsCTA from "@/components/views/events/eventsCta";
+// import EventsCTA from "@/components/views/events/eventsCta";
 import PageHero from "@/components/reusable/pageHeroSection";
 import { createClient } from "@/lib/supabase/server";
 import type { Metadata } from "next";
@@ -25,6 +25,8 @@ export default async function EventsPage() {
     .eq("is_active", true)
     .order("created_at", { ascending: false });
 
+  console.log(events);
+
   //
   return (
     <>
@@ -36,7 +38,7 @@ export default async function EventsPage() {
         imagePosition="center 30%"
       />
       <EventsList events={events ?? []} />
-      <EventsCTA />
+      {/* <EventsCTA /> */}
     </>
   );
 }

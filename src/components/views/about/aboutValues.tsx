@@ -1,27 +1,5 @@
 import RevealWrapper from "@/components/reusable/revealWrapper";
-
-const VALUES = [
-  {
-    icon: "✦",
-    title: "Authentic hospitality",
-    body: "Every guest is welcomed with a traditional Newar ceremony. Our team speaks your language but thinks in the language of the mountains.",
-  },
-  {
-    icon: "◈",
-    title: "Community first",
-    body: "100% locally staffed. We source ingredients from Tarap valley farmers, and reinvest in schools, trails and cultural preservation.",
-  },
-  {
-    icon: "◇",
-    title: "Responsible wilderness",
-    body: "We operate within strict Leave No Trace principles. Our lodge runs on solar energy and filtered glacial water. No roads. No compromise.",
-  },
-  {
-    icon: "○",
-    title: "Deep expertise",
-    body: "Our guides have walked every trail in Upper Dolpa for decades. Your safety and wonder are in the most experienced hands in the region.",
-  },
-];
+import { ABOUTPAGE_VALUES } from "@/utils/constants";
 
 export default function AboutValues() {
   return (
@@ -37,7 +15,7 @@ export default function AboutValues() {
         </RevealWrapper>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/8">
-          {VALUES.map((v, i) => (
+          {ABOUTPAGE_VALUES.map((v, i) => (
             <RevealWrapper
               key={v.title}
               delay={((i % 3) + 1) as 1 | 2 | 3}

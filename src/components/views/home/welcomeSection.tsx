@@ -29,7 +29,7 @@ export default function WelcomeSection() {
           {/* Main Image */}
           <div className="relative w-full h-125 lg:h-145">
             <Image
-              src="/images/upper-dolpa.png"
+              src="/images/hotel-7.jpg"
               alt="The Mountains Hotel interior"
               fill
               className="object-cover"
@@ -44,7 +44,7 @@ export default function WelcomeSection() {
               ★★★
             </strong>
             <span className="text-[0.65rem] tracking-widest uppercase block mt-0.5">
-              Eagle Mountain
+              Hotel Golden Eagle
               <br />
               Upper Dolpa
             </span>
@@ -80,8 +80,8 @@ export default function WelcomeSection() {
             world.
           </p>
 
-          <Button href="/gallery" variant="primary" external>
-            View Gallery
+          <Button href="/about" variant="primary">
+            About us
           </Button>
         </RevealWrapper>
       </div>

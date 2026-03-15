@@ -30,7 +30,8 @@ export default function PageHero({
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-linear-to-t from-(--navy)/90 via-(--navy)/30 to-transparent" />
+      <div className="absolute inset-0 bg-black/30 backdrop-brightness-75" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 px-6 md:px-[6vw] pb-16 max-w-175">

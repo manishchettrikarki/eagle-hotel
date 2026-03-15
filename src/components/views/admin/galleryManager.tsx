@@ -1,12 +1,25 @@
 "use client";
-
-import { useRef, useState } from "react";
 import Image from "next/image";
 
+import { useRef, useState } from "react";
+import imageCompression from "browser-image-compression";
 import { createClient } from "@/lib/supabase/client";
 import type { GalleryImage } from "@/lib/supabase/type";
 
 const CATEGORIES = ["Lodge", "Landscape", "Culture", "Dining", "Wellness"];
+
+// ── Allowed image MIME types ──────────────────────────────────
+const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/webp", "image/gif"];
+const MAX_SIZE_MB = 10; // reject files over 10 MB before even compressing
+
+// ── Compression settings ──────────────────────────────────────
+const COMPRESSION_OPTIONS = {
+  maxSizeMB: 1, // compress down to max 1 MB
+  maxWidthOrHeight: 1920, // no side larger than 1920px
+  useWebWorker: true, // non-blocking
+  fileType: "image/webp" as const, // always output webp for best size/quality
+  initialQuality: 0.82,
+};
 
 export default function GalleryManager({
   initialImages,
@@ -18,6 +31,7 @@ export default function GalleryManager({
 
   const [images, setImages] = useState<GalleryImage[]>(initialImages);
   const [uploading, setUploading] = useState(false);
+  const [uploadProgress, setProgress] = useState<string>("");
   const [deleting, setDeleting] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [editImg, setEditImg] = useState<GalleryImage | null>(null);
@@ -29,16 +43,62 @@ export default function GalleryManager({
   // ── Upload ──
   const uploadFiles = async (files: FileList | null) => {
     if (!files || files.length === 0) return;
+
+    // ── Validate every file before starting ──
+    const invalid: string[] = [];
+    for (const file of Array.from(files)) {
+      if (!ALLOWED_TYPES.includes(file.type)) {
+        invalid.push(
+          `"${file.name}" is not an image (videos and other files are not allowed)`,
+        );
+      } else if (file.size > MAX_SIZE_MB * 1024 * 1024) {
+        invalid.push(
+          `"${file.name}" exceeds ${MAX_SIZE_MB} MB — please use a smaller file`,
+        );
+      }
+    }
+    if (invalid.length > 0) {
+      setError(invalid.join("\n"));
+      if (fileRef.current) fileRef.current.value = "";
+      return;
+    }
+
     setUploading(true);
     setError(null);
 
-    for (const file of Array.from(files)) {
-      const ext = file.name.split(".").pop();
-      const filePath = `${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
+    const validFiles = Array.from(files);
+
+    for (let i = 0; i < validFiles.length; i++) {
+      const file = validFiles[i];
+      setProgress(
+        `Compressing ${i + 1} of ${validFiles.length}: ${file.name}…`,
+      );
+
+      // ── Compress ──
+      let compressed: File;
+      try {
+        const blob = await imageCompression(file, COMPRESSION_OPTIONS);
+        compressed = new File([blob], file.name.replace(/\.[^.]+$/, ".webp"), {
+          type: "image/webp",
+        });
+      } catch {
+        setError(`Failed to compress "${file.name}". Skipping.`);
+        continue;
+      }
+
+      setProgress(
+        `Uploading ${i + 1} of ${validFiles.length}: ${file.name} (${(compressed.size / 1024).toFixed(0)} KB)…`,
+      );
+
+      const filePath = `${Date.now()}-${Math.random().toString(36).slice(2)}.webp`;
 
       const { error: upErr } = await supabase.storage
         .from("gallery")
-        .upload(filePath, file, { cacheControl: "3600", upsert: false });
+        .upload(filePath, compressed, {
+          cacheControl: "3600",
+          upsert: false,
+          contentType: "image/webp",
+        });
 
       if (upErr) {
         setError(upErr.message);
@@ -56,7 +116,7 @@ export default function GalleryManager({
           public_url: publicUrl,
           caption: "",
           category: "Landscape",
-          sort_order: images.length,
+          sort_order: images.length + i,
         })
         .select()
         .single();
@@ -69,6 +129,7 @@ export default function GalleryManager({
     }
 
     setUploading(false);
+    setProgress("");
     if (fileRef.current) fileRef.current.value = "";
   };
 
@@ -148,7 +209,7 @@ export default function GalleryManager({
                   d="M4 12a8 8 0 018-8v8z"
                 />
               </svg>
-              Uploading…
+              Processing…
             </>
           ) : (
             "+ Upload images"
@@ -158,7 +219,7 @@ export default function GalleryManager({
           ref={fileRef}
           type="file"
           multiple
-          accept="image/*"
+          accept="image/jpeg,image/png,image/webp,image/gif"
           className="hidden"
           onChange={(e) => uploadFiles(e.target.files)}
         />
@@ -176,27 +237,28 @@ export default function GalleryManager({
           setDragOver(false);
           uploadFiles(e.dataTransfer.files);
         }}
-        onClick={() => fileRef.current?.click()}
-        className={`border-2 border-dashed rounded-none px-6 py-8 text-center cursor-pointer transition-all duration-200 mb-6 ${
-          dragOver
-            ? "border-(--gold) bg-(--gold)/5"
-            : "border-(--navy)/15 hover:border-(--navy)/35 bg-white"
+        onClick={() => !uploading && fileRef.current?.click()}
+        className={`border-2 border-dashed rounded-none px-6 py-8 text-center transition-all duration-200 mb-6 ${
+          uploading
+            ? "cursor-not-allowed opacity-60 border-(--navy)/15 bg-white"
+            : dragOver
+              ? "cursor-pointer border-(--gold) bg-(--gold)/5"
+              : "cursor-pointer border-(--navy)/15 hover:border-(--navy)/35 bg-white"
         }`}
       >
         <p className="text-(--navy)/40 text-[0.85rem] font-light">
-          {uploading
-            ? "Uploading…"
-            : "Drag & drop images here, or click to select"}
+          {uploadProgress || "Drag & drop images here, or click to select"}
         </p>
         <p className="text-(--navy)/25 text-[0.72rem] mt-1">
-          JPG, PNG, WEBP — multiple files supported
+          JPG, PNG, WEBP · Max {MAX_SIZE_MB} MB per file · Compressed to WebP
+          automatically
         </p>
       </div>
 
       {error && (
-        <p className="text-red-500 text-[0.82rem] bg-red-50 border border-red-200 px-4 py-2 mb-4">
+        <div className="text-red-500 text-[0.82rem] bg-red-50 border border-red-200 px-4 py-3 mb-4 whitespace-pre-line">
           {error}
-        </p>
+        </div>
       )}
 
       {/* Category filter */}
@@ -234,7 +296,7 @@ export default function GalleryManager({
                 src={img.public_url}
                 alt={img.caption ?? "Gallery image"}
                 fill
-                sizes="100vw"
+                sizes="(max-width:640px) 50vw, (max-width:1024px) 33vw, 20vw"
                 className="object-cover"
               />
 
@@ -283,14 +345,15 @@ export default function GalleryManager({
               </button>
             </div>
             <div className="p-6 flex flex-col gap-4">
-              <Image
-                src={editImg.public_url}
-                alt=""
-                width={600}
-                height={160}
-                sizes="100vw"
-                className="w-full h-40 object-cover"
-              />
+              <div className="relative w-full h-40">
+                <Image
+                  src={editImg.public_url}
+                  alt="Preview"
+                  fill
+                  sizes="420px"
+                  className="object-cover"
+                />
+              </div>
 
               <div className="flex flex-col gap-1.5">
                 <label className="text-[0.62rem] tracking-[0.12em] uppercase text-(--navy)/55">

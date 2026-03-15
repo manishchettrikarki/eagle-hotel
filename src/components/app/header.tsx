@@ -38,15 +38,15 @@ export default function Header() {
           <Link href="/" className="block">
             <div className="leading-tight mb-4 cursor-pointer">
               <span className="text-[0.65rem] tracking-[0.35em] uppercase block">
-                THE
+                HOTEL
               </span>
 
               <span className="font-display text-2xl md:text-3xl tracking-[0.15em] block">
-                EAGLE
+                GOLDEN
               </span>
 
               <span className="text-[0.65rem] tracking-[0.35em] uppercase block">
-                HOTEL
+                EAGLE
               </span>
             </div>
           </Link>
