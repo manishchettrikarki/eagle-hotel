@@ -11,7 +11,7 @@ export const NAV_LINKS: NavLink[] = [
 
 export const ABOUT_CONTENT = {
   title: "Welcome to Hotel Golden Eagle",
-  desc: "Hotel Golden Eagle offers a perfect blend of luxury, comfort, and breathtaking scenery. Located in a peaceful mountain destination, our hotel provides premium rooms, world-class dining, and relaxing spa experiences for travelers seeking both adventure and relaxation.",
+  desc: "Hotel Golden Eagle offers a perfect blend of comfort and breathtaking scenery. Located in a peaceful mountain destination, our hotel provides magical rooms, authentic mountain dining, and peaceful meditation experiences for travelers seeking both adventure and relaxation.",
   images: [
     "/images/hotel/about-1.jpg",
     "/images/hotel/about-2.jpg",
@@ -24,8 +24,8 @@ export const HOTEL_NAME = {
   first: "Hotel",
   second: "Golden",
   third: "Eagle",
-  heroFirst: "Where joy",
-  heroSecond: "exist",
+  heroFirst: "In the heart",
+  heroSecond: "of Upper Dolpo",
 };
 
 export const HOMEPAGE_GALLERY = {
@@ -115,7 +115,7 @@ export const CONTACT_INFO = {
   address: "Tarap Valley, Dho Tarap Village",
   city: "Upper Dolpa District, Karnali Province, Nepal",
   height: "3,950m above sea level",
-  phone: "+977 (0) 000 000 000",
+  phone: "+977 9745216366",
   email: "info@eaglemountain-dolpa.com",
   mapImage: "/images/hotel/map.jpg",
   location: "Dho Tarap · Upper Dolpa · Nepal",
@@ -149,17 +149,17 @@ export const LOCATION_STATS = [
 ];
 
 export const GALLERY_IMGS: string[] = [
-  "/images/hotel-2.jpg",
-  "/images/hotel-3.jpg",
-  "/images/hotel-4.jpg",
-  "/images/hotel-5.jpg",
-  "/images/hotel-6.jpg",
+  "/images/one.jpeg",
+  "/images/six.jpg",
+  "/images/three.jpg",
+  "/images/six.jpg",
+  "/images/five.jpg",
 ];
 
 export const GASTRO_IMGS: string[] = [
   "/images/food-1.jpg",
   "/images/food-2.jpg",
-  "/images/food-3.jpg",
+  "/images/food-4.jpg",
 ];
 
 export const VENUES = [
@@ -171,11 +171,11 @@ export const VENUES = [
 export const ROOM_TYPES: RoomType[] = [
   {
     name: "Dining Hall",
-    img: "/images/hotel-3.jpg",
+    img: "/images/dinning.jpg",
   },
   {
     name: "Camping Area",
-    img: "/images/hotel-9.jpg",
+    img: "/images/camping.jpg",
   },
   // {
   //   name: "Valley View Double",
@@ -195,7 +195,7 @@ export const ROOM_TYPES: RoomType[] = [
   // },
   {
     name: "Room",
-    img: "/images/hotel-11.jpg",
+    img: "/images/rooms/room1.png",
   },
 ];
 

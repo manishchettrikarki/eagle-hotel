@@ -26,17 +26,17 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
   const supabase = await createClient();
-  const { data: galleryImages } = await supabase
-    .from("gallery_images")
-    .select("id, public_url, caption")
-    .order("sort_order", { ascending: true })
-    .limit(12); // enough for the slider
+  // const { data: galleryImages } = await supabase
+  //   .from("gallery_images")
+  //   .select("id, public_url, caption")
+  //   .order("sort_order", { ascending: true })
+  //   .limit(12); // enough for the slider
 
   return (
     <>
       <HeroSection />
       <WelcomeSection />
-      <GallerySection images={galleryImages ?? []} />
+      <GallerySection images={[]} />
       <RoomsSection />
       <GastronomySection />
       <ServicesSection />

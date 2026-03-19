@@ -29,7 +29,7 @@ export default function WelcomeSection() {
           {/* Main Image */}
           <div className="relative w-full h-125 lg:h-145">
             <Image
-              src="/images/hotel-7.jpg"
+              src="/images/upper-dolpa.png"
               alt="The Mountains Hotel interior"
               fill
               className="object-cover"
@@ -68,16 +68,11 @@ export default function WelcomeSection() {
           <SectionHeader
             eyebrow="Upper dolpa, nepal"
             title="Hotel Golden Eagle"
-            body="Welcome to Hotel Golden Eagle, a luxurious retreat nestled in the heart of the majestic Himalayas. Experience unparalleled comfort, breathtaking views, and warm hospitality in our exquisite mountain sanctuary."
+            body="Welcome to Hotel Golden Eagle, a peaceful retreat in the remote beauty of Upper Dolpo, Nepal. Surrounded by the raw and untouched Himalayas, our hotel offers a truly heavenly experience—where silence, nature, and culture come together in perfect harmony."
           />
 
           <p className="text-[0.92rem] leading-[1.8] font-light text-(--charcoal) mt-4 mb-8 max-w-130">
-            Hotel Golden Eagle located in upper dolpa of nepal, is a luxurious
-            haven nestled amidst the breathtaking Himalayan mountains. With its
-            stunning architecture and world-class amenities, it offers an
-            unforgettable experience for travelers seeking tranquility and
-            adventure in one of the most remote and beautiful regions of the
-            world.
+           Located in one of the most isolated and breathtaking regions of Nepal, Hotel Golden Eagle is a simple yet special haven for travelers seeking connection—with the mountains, with local life, and with themselves. With traditional design, warm hospitality, and views that feel beyond this world, your stay here becomes more than just a visit—it becomes a memory of Dolpo itself.
           </p>
 
           <Button href="/about" variant="primary">

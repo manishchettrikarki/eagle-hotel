@@ -27,7 +27,7 @@ const TESTIMONIALS: Testimonial[] = [
     location: "Mumbai, India",
     date: "September 2024",
     rating: 5,
-    text: "Upper Dolpa is one of the most remote and spiritually profound places on earth, and Hotel Eagle Mountain honours that perfectly. The staff are incredibly warm, the traditional Newar cuisine was outstanding, and waking up to the raw Himalayan landscape every morning is something I will never forget.",
+    text: "Upper Dolpa is one of the most remote and spiritually profound places on earth, and Hotel Eagle Mountain honours that perfectly. The staff are incredibly warm, the traditional cuisine was outstanding, and waking up to the raw Himalayan landscape every morning is something I will never forget.",
     initials: "PN",
   },
   {

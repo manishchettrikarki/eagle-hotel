@@ -11,7 +11,7 @@ export default function AboutStory() {
       <div className="max-w-350 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-24 items-center">
         <RevealWrapper>
           <Image
-            src="/images/hotel-7.jpg"
+            src="/images/hotels.jpg"
             alt="Hotel Golden Eagle"
             width={900}
             height={520}

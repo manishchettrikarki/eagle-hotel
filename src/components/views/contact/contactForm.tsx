@@ -228,7 +228,7 @@ export default function ContactForm() {
                   </svg>
                 ),
                 label: "Phone / WhatsApp",
-                value: "+977 (0) 000 000 000",
+                value: "+977 9745216366",
                 href: "tel:+977000000000",
               },
             ].map((item) => (

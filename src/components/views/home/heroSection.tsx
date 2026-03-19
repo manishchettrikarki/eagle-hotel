@@ -13,7 +13,7 @@ export default function HeroSection() {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/videos/video-2.mp4" type="video/mp4" />
+          <source src="/videos/upper.mp4" type="video/mp4" />
         </video>
 
         <div className="absolute inset-0 bg-black/20" />
@@ -23,12 +23,12 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-linear-to-t from-(--navy)/85 via-(--navy)/20 to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 px-6 md:px-[6vw] pb-[10vh] max-w-175">
+      <div className="relative z-10 px-6 md:px-[6vw] pb-[10vh] max-w-195">
         <p className="animate-fade-up-1 text-[0.68rem] tracking-[0.35em] uppercase text-(--gold) mb-5">
           {HOTEL_NAME.full}
         </p>
 
-        <h1 className="animate-fade-up-2 font-display text-[clamp(3rem,7vw,6rem)] font-normal text-white leading-[1.05] mb-5">
+        <h1 className="animate-fade-up-2 font-display text-[clamp(3rem,7vw,4rem)] font-normal text-white leading-[1.05] mb-5">
           {HOTEL_NAME.heroFirst}{" "}
           <em className="italic text-(--gold)">{HOTEL_NAME.heroSecond}</em>
         </h1>
