@@ -215,13 +215,13 @@ export const SERVICES: ServiceCard[] = [
   {
     title: "Local Food & Village Homestay",
     desc: "Experience authentic Dolpo life by staying with local families and enjoying traditional meals like dal bhat, Tibetan bread, and butter tea.",
-    img: "/images/hotel-6.jpg",
+    img: "/images/dining.jpg",
     href: "#services",
   },
   {
     title: "Wildlife & Nature Exploration",
     desc: "Explore the wilderness of Shey Phoksundo National Park, home to rare wildlife such as snow leopards, blue sheep, and Himalayan wolves.",
-    img: "/images/hotel-9.jpg",
+    img: "/images/four.jpg",
     href: "#services",
   },
 ];
