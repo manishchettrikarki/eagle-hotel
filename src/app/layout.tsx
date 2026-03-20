@@ -101,8 +101,8 @@ export default function RootLayout({
               logo: `${SITE.url}/images/logo.png`,
               image: `${SITE.url}${SITE.ogImage}`,
               description: SITE.description,
-              telephone: "+977-000-000-000",
-              email: "info@eaglemountain-dolpa.com",
+              telephone: "+977 9745216366",
+              email: "hotelgoldeneagle1@gmail.com",
               priceRange: "$$$",
               starRating: { "@type": "Rating", ratingValue: "4" },
               address: {

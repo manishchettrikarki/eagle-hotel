@@ -66,7 +66,7 @@ export default function Footer() {
                   <IconEmail />
                 </span>
                 <a
-                  href="mailto:info@eaglemountain-dolpa.com"
+                  href="mailto:hotelgoldeneagle1@gmail.com"
                   className="text-[0.8rem] text-white/55 font-light hover:text-(--gold) transition-colors"
                 >
                   {CONTACT_INFO.email}

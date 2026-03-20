@@ -116,7 +116,7 @@ export const CONTACT_INFO = {
   city: "Upper Dolpa District, Karnali Province, Nepal",
   height: "3,950m above sea level",
   phone: "+977 9745216366",
-  email: "info@eaglemountain-dolpa.com",
+  email: "hotelgoldeneagle1@gmail.com",
   mapImage: "/images/hotel/map.jpg",
   location: "Dho Tarap · Upper Dolpa · Nepal",
 };

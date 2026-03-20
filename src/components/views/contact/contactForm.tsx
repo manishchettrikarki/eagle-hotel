@@ -208,8 +208,8 @@ export default function ContactForm() {
                   </svg>
                 ),
                 label: "Email",
-                value: "info@eaglemountain-dolpa.com",
-                href: "mailto:info@eaglemountain-dolpa.com",
+                value: "hotelgoldeneagle1@gmail.com",
+                href: "hotelgoldeneagle1@gmail.com",
               },
               {
                 icon: (
