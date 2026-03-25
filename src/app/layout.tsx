@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   keywords: [
-    "Hotel Eagle Mountain",
+    "Hotel Golden Eagle",
     "Dho Tarap hotel",
     "Upper Dolpa lodge",
     "Nepal luxury trekking lodge",
@@ -96,7 +96,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LodgingBusiness",
-              name: "Hotel Eagle Mountain",
+              name: "Hotel Golden Eagle",
               url: SITE.url,
               logo: `${SITE.url}/images/logo.png`,
               image: `${SITE.url}${SITE.ogImage}`,

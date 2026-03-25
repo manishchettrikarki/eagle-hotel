@@ -30,7 +30,7 @@ export default function WelcomeSection() {
           <div className="relative w-full h-125 lg:h-145">
             <Image
               src="/images/upper-dolpa.png"
-              alt="The Mountains Hotel interior"
+              alt="The Golden Eagle Hotel interior"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -72,7 +72,12 @@ export default function WelcomeSection() {
           />
 
           <p className="text-[0.92rem] leading-[1.8] font-light text-(--charcoal) mt-4 mb-8 max-w-130">
-           Located in one of the most isolated and breathtaking regions of Nepal, Hotel Golden Eagle is a simple yet special haven for travelers seeking connection—with the mountains, with local life, and with themselves. With traditional design, warm hospitality, and views that feel beyond this world, your stay here becomes more than just a visit—it becomes a memory of Dolpo itself.
+            Located in one of the most isolated and breathtaking regions of
+            Nepal, Hotel Golden Eagle is a simple yet special haven for
+            travelers seeking connection—with the mountains, with local life,
+            and with themselves. With traditional design, warm hospitality, and
+            views that feel beyond this world, your stay here becomes more than
+            just a visit—it becomes a memory of Dolpo itself.
           </p>
 
           <Button href="/about" variant="primary">

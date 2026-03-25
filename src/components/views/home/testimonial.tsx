@@ -19,7 +19,7 @@ const TESTIMONIALS: Testimonial[] = [
     location: "London, UK",
     date: "October 2024",
     rating: 5,
-    text: "Trekking into Dho Tarap and finding Hotel Eagle Mountain was one of the great surprises of my life. After days on the high trail, the warmth, the food, and the sheer comfort here felt like a miracle. The views of the Dhaulagiri range from my room were simply breathtaking.",
+    text: "Trekking into Dho Tarap and finding Hotel Golden Eagle was one of the great surprises of my life. After days on the high trail, the warmth, the food, and the sheer comfort here felt like a miracle. The views of the Dhaulagiri range from my room were simply breathtaking.",
     initials: "TH",
   },
   {
@@ -27,7 +27,7 @@ const TESTIMONIALS: Testimonial[] = [
     location: "Mumbai, India",
     date: "September 2024",
     rating: 5,
-    text: "Upper Dolpa is one of the most remote and spiritually profound places on earth, and Hotel Eagle Mountain honours that perfectly. The staff are incredibly warm, the traditional cuisine was outstanding, and waking up to the raw Himalayan landscape every morning is something I will never forget.",
+    text: "Upper Dolpa is one of the most remote and spiritually profound places on earth, and Hotel Golden Eagle honours that perfectly. The staff are incredibly warm, the traditional cuisine was outstanding, and waking up to the raw Himalayan landscape every morning is something I will never forget.",
     initials: "PN",
   },
   {
@@ -35,7 +35,7 @@ const TESTIMONIALS: Testimonial[] = [
     location: "Munich, Germany",
     date: "October 2024",
     rating: 5,
-    text: "We have trekked across Nepal many times but Dho Tarap and this lodge are in a class of their own. The Eagle Mountain team knows the Dolpa region intimately and helped us plan an extraordinary route. The rooms are cosy, clean and perfectly suited to the altitude and climate.",
+    text: "We have trekked across Nepal many times but Dho Tarap and this lodge are in a class of their own. The Golden Eagle team knows the Dolpa region intimately and helped us plan an extraordinary route. The rooms are cosy, clean and perfectly suited to the altitude and climate.",
     initials: "MV",
   },
   {
@@ -43,7 +43,7 @@ const TESTIMONIALS: Testimonial[] = [
     location: "Lyon, France",
     date: "August 2024",
     rating: 5,
-    text: "Arriving at Hotel Eagle Mountain after crossing the high passes of Upper Dolpa felt like reaching a true sanctuary. The hospitality is genuinely heartfelt. The traditional stone architecture, the courtyard with mountain views, and the incredible homemade meals made this a deeply memorable stay.",
+    text: "Arriving at Hotel Golden Eagle after crossing the high passes of Upper Dolpa felt like reaching a true sanctuary. The hospitality is genuinely heartfelt. The traditional stone architecture, the courtyard with mountain views, and the incredible homemade meals made this a deeply memorable stay.",
     initials: "CF",
   },
   {
@@ -51,7 +51,7 @@ const TESTIMONIALS: Testimonial[] = [
     location: "Nairobi, Kenya",
     date: "November 2024",
     rating: 5,
-    text: "I came to Upper Dolpa searching for something real, and I found it here. The remoteness of Dho Tarap is humbling — you are truly off the map. Hotel Eagle Mountain is a rare gem in this hidden valley. The guides they connected us with were exceptional and deeply knowledgeable about the land.",
+    text: "I came to Upper Dolpa searching for something real, and I found it here. The remoteness of Dho Tarap is humbling — you are truly off the map. Hotel Golden Eagle is a rare gem in this hidden valley. The guides they connected us with were exceptional and deeply knowledgeable about the land.",
     initials: "DO",
   },
   {
@@ -59,7 +59,7 @@ const TESTIMONIALS: Testimonial[] = [
     location: "Kyoto, Japan",
     date: "September 2024",
     rating: 5,
-    text: "The Dolpa region carries an ancient, meditative energy unlike anywhere else I have travelled. Hotel Eagle Mountain understood this completely. Every detail — the local stone construction, the butter tea by the fire, the silence of the Tarap valley at night — felt intentional and deeply respectful of the place.",
+    text: "The Dolpa region carries an ancient, meditative energy unlike anywhere else I have travelled. Hotel Golden Eagle understood this completely. Every detail — the local stone construction, the butter tea by the fire, the silence of the Tarap valley at night — felt intentional and deeply respectful of the place.",
     initials: "YT",
   },
 ];

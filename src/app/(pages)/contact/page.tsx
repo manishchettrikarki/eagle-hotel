@@ -9,7 +9,7 @@ import { makeTitle, SITE, ogImage } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Contact & Plan Your Journey",
   description:
-    "Contact Hotel Eagle Mountain to plan your trip to Dho Tarap. Ask about trekking permits, room availability, guided expeditions and bespoke experiences in Upper Dolpa, Nepal.",
+    "Contact Hotel Golden Eagle to plan your trip to Dho Tarap. Ask about trekking permits, room availability, guided expeditions and bespoke experiences in Upper Dolpa, Nepal.",
   alternates: { canonical: "/contact" },
   openGraph: {
     url: `${SITE.url}/contact`,

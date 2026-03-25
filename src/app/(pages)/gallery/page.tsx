@@ -10,7 +10,7 @@ import { makeTitle, SITE, ogImage } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "Photographs of Hotel Eagle Mountain, Dho Tarap village, the Tarap valley, Himalayan landscapes, Bon culture, and mountain dining in Upper Dolpa, Nepal.",
+    "Photographs of Hotel Golden Eagle, Dho Tarap village, the Tarap valley, Himalayan landscapes, Bon culture, and mountain dining in Upper Dolpa, Nepal.",
   alternates: { canonical: "/gallery" },
   openGraph: {
     url: `${SITE.url}/gallery`,

@@ -52,7 +52,7 @@ export default function AdminLoginPage() {
             ✦ Admin Portal
           </p>
           <h1 className="font-display text-[2rem] text-white font-normal">
-            Hotel Eagle Mountain
+            Hotel Golden Eagle
           </h1>
           <p className="text-white/40 text-[0.78rem] mt-1 font-light">
             Dho Tarap · Upper Dolpa · Nepal
@@ -137,7 +137,7 @@ export default function AdminLoginPage() {
         </div>
 
         <p className="text-center text-white/20 text-[0.7rem] mt-6">
-          Restricted access · Hotel Eagle Mountain staff only
+          Restricted access · Hotel Golden Eagle staff only
         </p>
       </div>
     </div>

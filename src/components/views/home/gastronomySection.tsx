@@ -19,7 +19,7 @@ export default function GastronomySection() {
           >
             <Image
               src={GASTRO_IMGS[0]}
-              alt="Dining at Eagle Mountain"
+              alt="Dining at Golden Eagle"
               fill
               sizes="(max-width:1024px) 50vw, 25vw"
               className="object-cover"

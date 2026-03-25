@@ -31,7 +31,7 @@ export default async function AdminDashboard() {
           Welcome back ✦
         </h1>
         <p className="text-(--charcoal)/60 text-[0.88rem] font-light mt-1">
-          Hotel Eagle Mountain · Admin Dashboard
+          Hotel Golden Eagle · Admin Dashboard
         </p>
       </div>
 

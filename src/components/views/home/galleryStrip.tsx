@@ -16,7 +16,10 @@ interface SliderImage {
 
 // ── Static fallback (shown if Supabase has no images yet) ──
 const FALLBACK_IMGS: SliderImage[] = [
-  { src: "/images/gallery/1.jpg", alt: "Hotel Eagle Mountain — Upper Dolpa Camping" },
+  {
+    src: "/images/gallery/1.jpg",
+    alt: "Hotel Golden Eagle — Upper Dolpa Camping",
+  },
   { src: "/images/gallery/2.jpg", alt: "Tarap Valley landscape" },
   { src: "/images/gallery/3.jpg", alt: "Upper dolpa yak" },
   { src: "/images/gallery/4.jpg", alt: "Horse crossing stream in Dho Tarap" },
@@ -36,7 +39,7 @@ export default function GallerySection({ images }: Props) {
       ? images.map((img) => ({
           id: img.id,
           src: img.public_url,
-          alt: img.caption ?? "Hotel Eagle Mountain",
+          alt: img.caption ?? "Hotel Golden Eagle",
         }))
       : FALLBACK_IMGS;
 

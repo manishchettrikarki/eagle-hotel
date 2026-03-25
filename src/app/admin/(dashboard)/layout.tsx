@@ -113,7 +113,7 @@ export default function AdminLayout({
             Admin Portal
           </p>
           <p className="font-display text-white text-[0.95rem] font-normal leading-snug">
-            Hotel Eagle Mountain
+            Hotel Golden Eagle
           </p>
         </div>
 

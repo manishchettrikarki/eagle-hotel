@@ -1,9 +1,9 @@
 export const SITE = {
-  name: "Hotel Eagle Mountain",
+  name: "Hotel Golden Eagle",
   tagline: "A sanctuary at 3,950 metres",
   url: "https://www.hotelgoldeneagle.com",
   description:
-    "Hotel Eagle Mountain is a luxury wilderness lodge in Dho Tarap, Upper Dolpa, Nepal — at 3,950 metres. Offering guided Himalayan treks, snow leopard safaris, cultural immersions and mountain wellness retreats in one of the world's most remote and sacred valleys.",
+    "Hotel Golden Eagle is a luxury wilderness lodge in Dho Tarap, Upper Dolpa, Nepal — at 3,950 metres. Offering guided Himalayan treks, snow leopard safaris, cultural immersions and mountain wellness retreats in one of the world's most remote and sacred valleys.",
   locale: "en_US",
   ogImage: "https://www.hotelgoldeneagle.com/images/og-default.jpg",
   twitter: "@eaglemtndolpa",

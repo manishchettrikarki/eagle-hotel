@@ -278,7 +278,7 @@ export default function ContactForm() {
                 },
                 {
                   step: "4",
-                  text: "Arrive at Hotel Eagle Mountain — your sanctuary awaits",
+                  text: "Arrive at Hotel Golden Eagle — your sanctuary awaits",
                 },
               ].map((s) => (
                 <div key={s.step} className="flex items-start gap-3">
