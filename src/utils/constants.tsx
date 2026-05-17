@@ -65,29 +65,29 @@ export const ABOUTPAGE_VALUES = [
 
 export const ABOUTPAGE_TEAM = [
   {
-    name: "Pemba Sherpa",
-    role: "Founder & Head Guide",
+    name: "Tenzin Phurba Lama",
+    role: "Founder",
     bio: "Born in Dho Tarap, Pemba has guided trekkers through Upper Dolpa for over 25 years. His knowledge of the land, language and culture is unmatched.",
     img: "/images/userPlaceholder.jpg",
   },
   {
-    name: "Sita Budha",
-    role: "Lodge Manager",
+    name: "Palzom Thapa",
+    role: "Co-founder",
     bio: "A Dolpa native and trained hospitality professional, Sita ensures every guest experiences the warmth of Tarap valley's legendary generosity.",
     img: "/images/userPlaceholder.jpg",
   },
-  {
-    name: "Dawa Lama",
-    role: "Head Chef",
-    bio: "Dawa transforms the seasonal harvest of the Tarap valley into extraordinary meals — from yak-butter dumplings to high-altitude herb infusions.",
-    img: "/images/userPlaceholder.jpg",
-  },
-  {
-    name: "Tenzin Gurung",
-    role: "Expedition Lead",
-    bio: "With 15 years guiding remote Himalayan expeditions, Tenzin plans every route with meticulous care for safety, ecology and cultural respect.",
-    img: "/images/userPlaceholder.jpg",
-  },
+  // {
+  //   name: "Dawa Lama",
+  //   role: "Head Chef",
+  //   bio: "Dawa transforms the seasonal harvest of the Tarap valley into extraordinary meals — from yak-butter dumplings to high-altitude herb infusions.",
+  //   img: "/images/userPlaceholder.jpg",
+  // },
+  // {
+  //   name: "Tenzin Gurung",
+  //   role: "Expedition Lead",
+  //   bio: "With 15 years guiding remote Himalayan expeditions, Tenzin plans every route with meticulous care for safety, ecology and cultural respect.",
+  //   img: "/images/userPlaceholder.jpg",
+  // },
 ];
 
 export const BLOG_POSTS = [

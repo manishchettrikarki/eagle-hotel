@@ -24,7 +24,9 @@ export async function middleware(req: NextRequest) {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  const { pathname } = req.nextUrl;
+  // const { pathname } = req.nextUrl;
+
+  const pathname = req.nextUrl.pathname.replace(/\/$/, "");
 
   // Protect all /admin routes except /admin/login
   if (pathname.startsWith("/admin") && pathname !== "/admin/login") {

@@ -15,7 +15,7 @@ export default function AboutTeam() {
           </h2>
         </RevealWrapper>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2  gap-6">
           {ABOUTPAGE_TEAM.map((member, i) => (
             <RevealWrapper
               key={member.name}
@@ -23,13 +23,13 @@ export default function AboutTeam() {
               className="group"
             >
               <div className="overflow-hidden mb-4">
-                <Image
+                {/* <Image
                   src={member.img}
                   alt={member.name}
                   width={400}
                   height={300}
                   className="w-full h-75 object-cover object-top transition-transform duration-700 group-hover:scale-[1.05]"
-                />
+                /> */}
               </div>
               <p className="text-[0.6rem] tracking-[0.2em] uppercase text-(--gold) mb-1">
                 {member.role}
